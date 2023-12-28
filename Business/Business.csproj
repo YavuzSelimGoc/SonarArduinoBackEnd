@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
+    <None Remove="Constants\" />
+    <None Remove="ValidationRules\FluentValidation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="Constants\" />
+    <Folder Include="ValidationRules\FluentValidation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Core.Application">
+      <HintPath>..\..\nArch\src\corePackages\Core.Packages\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.CrossCuttingConcerns">
+      <HintPath>..\..\nArch\src\corePackages\Core.Packages\Core.CrossCuttingConcerns\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Persistance">
+      <HintPath>..\..\nArch\src\corePackages\Core.Packages\Core.Persistance\bin\Debug\net7.0\Core.Persistance.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
